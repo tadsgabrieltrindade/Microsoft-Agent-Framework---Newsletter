@@ -11,15 +11,17 @@ public class SubscriberRepository : ISubscriberRepository
     /// </summary>
     /// <param name="cancellationToken"></param>
     /// <returns>Uma lista de assinantes cadastrados.</returns>
-    public Task<IEnumerable<Subscriber>> GetAllAsync(CancellationToken cancellationToken)
+     public async Task<IEnumerable<Subscriber>> GetAllAsync(CancellationToken cancellationToken)
     {
-        IEnumerable<Subscriber> subscribers =
-        [
-            new("Alice Silva", "alice@example.com"),
-            new("Bruno Costa", "bruno@example.com"),
-            new("Carla Souza", "carla@example.com")
-        ];
+        await Task.Delay(100, cancellationToken);
 
-        return Task.FromResult(subscribers);
+        return
+        [
+            new Subscriber("Andre Baltieri", "hello@balta.io"),
+            new Subscriber("Gemini AI", "gemini@example.com"),
+            new Subscriber("DotNet User", "user@dotnet.com"),
+            new Subscriber("Software Architect", "arch@dev.com"),
+            new Subscriber("Clean Code Fan", "bob@uncle.com")
+        ];
     }
 }

@@ -18,10 +18,36 @@ public class ArticleRepository : IArticleRepository
 
         return
         [
-            new("Article 1", "/articles/article-1", "Content of article 1", DateTime.UtcNow.AddDays(-3)),
-            new("Article 2", "/articles/article-2", "Content of article 2", DateTime.UtcNow.AddDays(-5)),
-            new("Article 3", "/articles/article-3", "Content of article 3", DateTime.UtcNow.AddDays(-6)),
-            new("Article 4", "/articles/article-4", "Content of article 4", DateTime.UtcNow.AddDays(-7))
+            new Article(
+                "Dapper: Mapeando consultas complexas",
+                "https://blog.balta.io/dapper-mapeando-consultas-complexas/",
+                "Learn how to map complex queries using Dapper in .NET...",
+                DateTime.Now.AddDays(-1)
+            ),
+            new Article(
+                "FluentValidation: Validando seus domínios",
+                "https://blog.balta.io/fluent-validation/",
+                "A deep dive into domain validation with FluentValidation...",
+                DateTime.Now.AddDays(-2)
+            ),
+            new Article(
+                "Entity Framework: Performance com AsNoTracking",
+                "https://blog.balta.io/ef-performance/",
+                "Boost your EF Core performance using the AsNoTracking method...",
+                DateTime.Now.AddDays(-3)
+            ),
+            new Article(
+                "Minimal APIs: Quando utilizar?",
+                "https://blog.balta.io/minimal-apis-quando-utilizar/",
+                "Discover the best scenarios to implement Minimal APIs in .NET 8...",
+                DateTime.Now.AddDays(-4)
+            ),
+            new Article(
+                "C# 12: Novidades do Collection Expressions",
+                "https://blog.balta.io/csharp-12-collection-expressions/",
+                "The new way to initialize collections in C# 12 is here...",
+                DateTime.Now.AddDays(-5)
+            )
         ];
     }
 }
