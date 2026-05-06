@@ -1,6 +1,6 @@
 using System;
 
-namespace Newsletter.Api.Providers.Abstractions;
+namespace Newsletter.Ai.Providers.Abstractions;
 
 public interface IPromptProvider
 {

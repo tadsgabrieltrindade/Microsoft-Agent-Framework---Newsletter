@@ -17,5 +17,5 @@ public interface IAgents<in TData, TResponse>
     /// Executa a ação do agente com os dados fornecidos e retorna uma resposta.
     /// </summary> <param name="data">Os dados de entrada para o agente.</param>
     /// <param name="cancellationToken">Token de cancelamento para a operação assíncrona.</param>
-    Task<TResponse> ExecuteAsync(TData data, CancellationToken cancellationToken);
+    Task<TResponse> RunAsync(TData data, CancellationToken cancellationToken);
 }
