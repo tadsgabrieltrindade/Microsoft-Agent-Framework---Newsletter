@@ -2,7 +2,7 @@ using System;
 
 namespace Newsletter.Core.Model;
 
-public sealed record Subcriber
+public sealed record Subscriber
 (
     string Name,
     string Email
