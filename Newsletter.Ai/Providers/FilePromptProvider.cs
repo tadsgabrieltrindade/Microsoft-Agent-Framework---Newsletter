@@ -5,7 +5,7 @@ namespace Newsletter.Ai.Providers;
 
 public class FilePromptProvider : IPromptProvider
 {
-      public async Task<string> GetPromptAsync(string agentName)
+      public async Task<string> GetPromptAsync(string agentName, CancellationToken ct)
     {
         var assembly = typeof(FilePromptProvider).Assembly;
 
@@ -16,6 +16,6 @@ public class FilePromptProvider : IPromptProvider
             throw new FileNotFoundException($"Prompt for {agentName} not found: {resourceName}");
 
         using var reader = new StreamReader(stream);
-        return await reader.ReadToEndAsync();
+        return await reader.ReadToEndAsync(cancellationToken: ct);
     }
 }
